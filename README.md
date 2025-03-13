@@ -1,4 +1,4 @@
-Master - Sistemi elemtronske uprave (Tema: E-voting) - Fokus UX, pretezno koriscen bootstrap
+Master - Sistemi elemtronske uprave (Tema: E-voting) - Fokus na User Experience, pretezno koriscen bootstrap.
 
 
 Aplikacija je u razvoju...
