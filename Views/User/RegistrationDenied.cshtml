@@ -1,0 +1,40 @@
+﻿<style>
+    footer {
+        display: none
+    }
+
+    .headerbg {
+        background: linear-gradient(to left, #eb312a 100%, white ) !important;
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+    .nav-item i {
+        color: black !important;
+        transition: all ease-in-out 0.3s;
+    }
+
+    .nav-item:hover i {
+        color: darkgoldenrod !important;
+    }
+
+    .navigacijan {
+        display: none;
+    }
+</style>
+
+@{
+    ViewData["Title"] = "Registracija Odbijena";
+}
+<div class="d-flex justify-content-center align-items-center" style="height:100vh; text-align: center; background-color:#eb312a; padding:100px; margin-top:-50px;">
+    <div>
+        <h2 style="color:white; font-weight:900; text-transform:uppercase">Registracija je Odbijena</h2>
+        <p style="color:white; font-style: italic; margin-bottom:50px;">@ViewBag.Message</p>
+        <a href="@Url.Action("Create", "User")" class="dugme">Pokušajte ponovo <i class="bi bi-arrow-clockwise"></i></a>
+    </div>
+</div>
+
+
+

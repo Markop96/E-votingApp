@@ -1,0 +1,84 @@
+﻿@model E_glasanje.Models.User
+
+<style>
+    footer{display:none}
+
+    .headerbg {
+        background: linear-gradient(to left, #eb312a 0%, white ) !important;
+    }    
+
+    body {
+        background: linear-gradient(to left, #eb312a 0%, white 50%) !important;
+        overflow: hidden;
+    }
+
+    .nav-item i{
+    color:black !important;
+        transition: all ease-in-out 0.3s;
+    }
+
+    .nav-item:hover i {
+        color: darkgoldenrod !important;
+    }
+
+    .navigacijan{
+    display:none;}
+</style>
+
+<div class="row container100 user" style="padding-top:3vw;">
+    <!-- Leva polovina sa formom -->
+    <div class="col-md-6 lefthalf">
+        <h1>Registracija</h1>
+
+        <form asp-action="Create" style="justify-items:center">
+            <div class="form-group">
+                <label asp-for="Ime" class="control-label"></label>
+                <input asp-for="Ime" class="form-control" />
+                <span asp-validation-for="Ime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Prezime" class="control-label"></label>
+                <input asp-for="Prezime" class="form-control" />
+                <span asp-validation-for="Prezime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DatumRodjenja" class="control-label"></label>
+                <input asp-for="DatumRodjenja" class="form-control" type="date" />
+                <span asp-validation-for="DatumRodjenja" class="text-danger"></span>
+            </div>
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="JMBG" class="control-label"></label>
+                <input asp-for="JMBG" class="form-control" style="letter-spacing:15px;" />
+                <span asp-validation-for="JMBG" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Telefon" class="control-label"></label>
+                <input asp-for="Telefon" class="form-control" />
+                <span asp-validation-for="Telefon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Registrujte se" id="input1"/>
+            </div>
+        </form>
+    </div>
+
+    <!-- Desna polovina sa praznim div-om i dugmetom u sredini -->
+    <div class="col-md-6" style="text-align:center; align-items:center !important; justify-content:center; align-content:center">
+            <h2>
+                Već ste registovani?
+            </h2> <hr />
+            <h3>
+            Ako ste već registrovani korisnik, možete jednostavno <br />  pristupiti delu za prijavu kako biste se ulogovali u sistem.
+            </h3>
+        <a asp-controller="Login" asp-action="Index"><i class="bi bi-arrow-right-circle nextstep"></i></a>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

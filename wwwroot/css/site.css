@@ -1,0 +1,230 @@
+﻿html {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+    body::-webkit-scrollbar {
+        display: none; /* Sakriva skrol bar u Webkit pregledačima (Chrome, Safari) */
+    }
+
+.container0 {
+margin-left:0 !important;
+
+margin-right:0 !important;
+
+}
+
+.navigacionimeni {
+
+z-index:999;
+}
+
+.container150 {
+    margin-left: 150px !important;
+    margin-right: 150px !important;
+}
+
+.container120 {
+    margin-left: 120px !important;
+    margin-right: 120px !important;
+}
+
+.container100 {
+    margin-left: 100px !important;
+    margin-right: 100px !important;
+}
+
+.container70 {
+    margin-left: 70px !important;
+    margin-right: 70px !important;
+}
+
+.container200 {
+    margin-left: 200px !important;
+    margin-right: 200px !important;
+}
+
+.container300 {
+    margin-left: 300px !important;
+    margin-right: 300px !important;
+}
+
+.iconhome {
+    color: white;
+    font-size: 20px;
+}
+    .iconhome:hover {
+        color: lightgrey;
+    }
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.headerbg {
+    background: linear-gradient(to right, #eb312a 10%, #3275b8 20%, white 40%)
+}
+
+
+.tooltip-inner {
+    background-color: dimgray !important; 
+    color: white !important; 
+    border-radius: 8px; 
+    padding: 12px 20px; 
+    font-size: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    max-width: 200px; 
+    text-align: center; 
+    transition: opacity 0.3s ease-in-out; 
+}
+
+.tooltip {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.tooltip-arrow {
+    display: none !important;
+}
+
+.user input {
+    width: 450px;
+    background: rgba(6, 77, 148,0.2);
+    border:none;
+    text-align:center !important;
+    color:darkred;
+    font-weight:700;
+}
+
+    .user input:focus {
+        background: rgba( 150, 3, 8,0.2);
+        border: none;
+        color: midnightblue;
+    }
+
+.user h1 {
+padding-bottom:30px;
+text-align:center;
+font-weight:900;
+letter-spacing:5px;
+text-transform:uppercase;
+color:darkgoldenrod;
+text-shadow: 2px 5px 1px black;
+}
+
+.user label {
+
+    padding:4px;
+}
+
+.lefthalf {
+    background: rgba(255, 255, 255,1);
+    padding: 100px;
+    border-radius:50px;
+}
+
+
+#input1 {
+    background-color: #3275b8;
+    color: white !important;
+    margin-top: 25px;
+    border-radius: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all ease-in-out 0.2s;
+    height: 50px;
+}
+
+    #input1:hover {
+        background-color: darkgoldenrod !important;
+    }
+
+.user h2 {
+    text-transform: uppercase;
+    font-size: 28px;
+    color: black;
+    text-shadow: 2px 3px 1px darkgoldenrod;
+    font-weight: 700;
+}
+
+.user h3 {
+    text-transform: lowercase;
+    font-size: 15px;
+    color: black;
+    padding:20px;
+}
+
+.nextstep {
+    color: #3275b8 !important;
+    font-size: 80px;
+    text-shadow: 3px 3px 1px black;
+    transition: all ease-in-out 1s;
+}
+
+    .nextstep:hover {
+        color: darkgoldenrod !important;
+        font-size: 100px;
+    }
+
+
+.login input {
+    width: 450px;
+    background: rgba( 150, 3, 8,0.2);
+    border: none;
+    text-align: center !important;
+    font-weight: 700;
+    color: midnightblue;
+}
+
+    .login input:focus {
+        background: rgba(6, 77, 148,0.2);
+        border: none;
+        color: darkred !important;
+    }
+
+.login a{
+    color:black !important;
+    transition: all ease-in-out 0.2s;
+}
+
+.login a:hover {
+    color: darkgoldenrod !important
+}
+
+.dugme {
+  padding:15px; background-color:#3275b8; color:white; text-decoration:none; border-radius:20px;
+  transition: all ease-in-out 0.5s
+}
+
+    .dugme:hover {
+    color:white;
+    background-color:darkgoldenrod
+    }

@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Uspešno Glasanje";
+}
+
+<h2>@ViewData["Message"]</h2>
+
+@if (ViewData["MessageType"] != null && ViewData["MessageType"].ToString() == "success")
+{
+    <div class="alert alert-success">
+        @ViewData["Message"]
+    </div>
+}

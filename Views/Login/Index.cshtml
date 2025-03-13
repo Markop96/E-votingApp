@@ -1,0 +1,59 @@
+﻿@model E_glasanje.Models.LoginModel
+
+<style>
+    footer {
+        display: none
+    }
+
+    .headerbg {
+        background: linear-gradient(to right, #3275b8 0%, white ) !important;
+    }
+
+    body {
+        background: linear-gradient(to right, #3275b8 0%, white 70%) !important;
+        overflow: hidden;
+    }
+
+    .nav-item i {
+        color: black !important;
+        transition: all ease-in-out 0.3s;
+    }
+
+    .nav-item:hover i {
+        color: darkgoldenrod !important;
+    }
+
+    .navigacijan {
+        display: none;
+    }
+</style>
+<form asp-action="Login" method="post" class="login container100 user" style="padding-top:10vw; justify-items:center">
+    <h1>Prijavite se</h1>
+    <div class="form-group">
+        <label asp-for="JMBG" class="control-label"></label>
+        <input asp-for="JMBG" class="form-control" style="letter-spacing:15px;" />
+        <span asp-validation-for="JMBG" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Sifra" class="control-label"></label>
+        <input asp-for="Sifra" class="form-control" type="password" />
+        <span asp-validation-for="Sifra" class="text-danger"></span>
+    </div>
+
+    <button type="submit" id="input1" style="width:450px; border:none; background-color:#eb312a; font-weight:700; margin-top:50px;">Prijavite se <i class="bi bi-arrow-right-circle" style="padding-left:5px;"></i></button>
+    <br />
+
+    <div style="margin-top:190px;">
+        <a style="color:black;" href="@Url.Action("Create", "User")"> <i class="bi bi-arrow-left-circle"></i> Nemate nalog? Registrujte se.</a>
+    </div>
+
+</form>
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

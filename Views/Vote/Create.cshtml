@@ -1,0 +1,36 @@
+﻿@model E_glasanje.Models.Vote
+
+@{
+    ViewData["Title"] = "Glasanje";
+}
+
+<h2>Glasanje</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="JMBG">JMBG:</label>
+        <input type="text" id="JMBG" name="JMBG" class="form-control" value="@Model.JMBG" readonly />
+    </div>
+
+    <div class="form-group">
+        <label for="TypeId">Tip glasanja:</label>
+        <select id="TypeId" name="TypeId" class="form-control" required>
+            @foreach (var type in (ViewData["VotingTypes"] as List<E_glasanje.Models.Type>))
+            {
+                <option value="@type.Id">@type.Name</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="CandidateId">Kandidat:</label>
+        <select id="CandidateId" name="CandidateId" class="form-control" required>
+            @foreach (var candidate in (ViewData["Candidates"] as List<E_glasanje.Models.Candidate>))
+            {
+                <option value="@candidate.Id">@candidate.CandidateName</option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Glasaj</button>
+</form>

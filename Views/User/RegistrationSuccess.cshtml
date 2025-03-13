@@ -1,0 +1,53 @@
+﻿<style>
+    footer {
+        display: none
+    }
+
+    .headerbg {
+        background: linear-gradient(to left, #0e6900 100%, white ) !important;
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+    .nav-item i {
+        color: black !important;
+        transition: all ease-in-out 0.3s;
+    }
+
+    .nav-item:hover i {
+        color: darkgoldenrod !important;
+    }
+
+    .navigacijan {
+        display: none;
+    }
+</style>
+
+@if (ViewBag.IsSuccess != null && (bool)ViewBag.IsSuccess)
+{
+    <div class="d-flex justify-content-center align-items-center" style="height:100vh; text-align: center; background-color:#0e6900; padding:100px; margin-top:-50px;">
+        <div>
+            <h2 style="color:white; font-weight:900; text-transform:uppercase">Uspešno ste se registrovali!</h2>
+            <p style="color:white; margin-bottom:10px; font-size:30px;">Vaš JMBG je: <strong style="color:white; font-size:50px; text-transform:none">@ViewBag.JMBG</strong></p>
+            <p style="color:white; margin-bottom:50px; font-size:30px;">Vaša lozinka je: <strong style="color:white; font-size:50px; text-transform:none">@ViewBag.Lozinka</strong></p>
+            <p style="border-top:10px solid red;border-bottom:10px solid red;color:white; margin-bottom:50px; font-size:17px; text-transform:lowercase; width:100%; padding:20px;">
+                *VAZNO: OBAVEZNO SACUVJATE ILI ZAPAMTITE AUTOMATSKO GENERISANO LOZINKU KOJU CETE KORISTITI ZA PRIJAVU!
+                <br /> U SUPROTNOM BICE POTREBNO DA SE OBRATITE SLUZBI ZA POMOC RADI GENERISANJA NOVE*
+            </p>
+            <a asp-controller="Login" asp-action="Index" class="dugme">Prijavite se <i class="bi bi-arrow-right-circle"></i></a>
+        </div>
+    </div>
+}
+else
+{
+    <div class="d-flex justify-content-center align-items-center" style="height:100vh; text-align: center; background-color:#eb312a; padding:100px; margin-top:-50px;">
+        <div>
+            <h2 style="color:white; font-weight:900; text-transform:uppercase">Došlo je do greške prilikom registracije!</h2>
+            <p style="color:white; font-style: italic; margin-bottom:50px;">Molimo pokušajte ponovo.</p>
+            <a href="@Url.Action("Create", "User")" class="dugme">Pokušajte ponovo <i class="bi bi-arrow-clockwise"></i></a>
+        </div>
+    </div>
+}
+
